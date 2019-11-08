@@ -19,12 +19,17 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.lottery);
         buttonClick = findViewById(R.id.click);
-        buttonClick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.v("brad", "OK");
-            }
-        });
 
+        MyListener myListener = new MyListener();
+        buttonClick.setOnClickListener(myListener);
     }
+
+    private class MyListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+
+        }
+    }
+
+
 }
